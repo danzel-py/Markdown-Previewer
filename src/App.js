@@ -3,15 +3,16 @@ import React from 'react';
 import marked from 'marked';
 
 
-function App() {
-  return (
-    <div>
-      <Editor></Editor>
-      
-    </div>
-  );
+class App extends React.Component{
+  render(){
+    return (
+      <div id="app">
+        <div id='title'>Markdown Previewer</div>
+        <Editor></Editor>
+      </div>
+    )
+  }
 }
-
 class Editor extends React.Component{
   constructor(props){
     super(props);
@@ -69,9 +70,13 @@ And here. | Okay. | I think we get it.
   render(){
     const text = this.state.editText
     return(
-      <div>Editor
-        <textarea id="editor" value={text} onChange={this.handleChange}></textarea>
+      <div id='mainContainer'>
+        <div id='editorContainer'>Editor
+        <textarea id="editor" className='textContent' value={text} onChange={this.handleChange}></textarea>
+        </div>
+        <div id='previewerContainer'>Preview
         <Previewer textPreview = {text}/>
+        </div>
       </div>
     )
   }
@@ -104,10 +109,7 @@ class Previewer extends React.Component{
 
   render(){
     return(
-      <div>Previewer
-        <div id="preview">
-          <div dangerouslySetInnerHTML={{ __html: this.state.markVersion}}/>
-        </div>
+      <div id="preview" className='textContent' dangerouslySetInnerHTML={{ __html: this.state.markVersion}}>
       </div>
     )
   }

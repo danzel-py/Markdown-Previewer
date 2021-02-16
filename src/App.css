@@ -1,0 +1,55 @@
+#app{
+    height: 100vh;
+    background-color: #443627;
+    display:flex;
+    flex-direction: column;
+}
+
+#title{
+    font-size:xx-large;
+    color: #D5DCF9;
+    height: 2em;
+    margin: 0em;
+    padding: 0em;
+}
+
+#mainContainer{
+    background: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    height: calc(100vh - 3em)
+}
+
+#editorContainer{
+    display: flex;
+    flex-direction: column;
+    width: 35em;
+    padding: 1em
+}
+
+#previewerContainer{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    padding: 1em
+}
+
+.textContent{
+    color: black;
+    background-color: transparent;
+    display: block;
+    border: solid;
+    border-color: brown;
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    resize: none;
+    height: 100%;
+    padding: 0px;
+    text-align: left
+}
+
