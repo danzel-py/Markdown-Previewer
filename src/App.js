@@ -7,7 +7,10 @@ class App extends React.Component{
   render(){
     return (
       <div id="app">
-        <div id='title'>Markdown Previewer</div>
+        <div id='title'>
+          <div>
+          <a href="https://reactjs.org"><img src="https://i.ibb.co/LY9JXWv/LOGO-bening-kotak.png" alt="LOGO-bening-kotak" height='30'border="0"></img></a>
+          </div><div>Markdown Previewer</div></div>
         <Editor></Editor>
       </div>
     )
@@ -114,6 +117,5 @@ class Previewer extends React.Component{
     )
   }
 }
-
 
 export default App;
